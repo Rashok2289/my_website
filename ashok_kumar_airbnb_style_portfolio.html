@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Ashok Kumar — Platform Product Owner, AI/ML Product Manager and Engineering professional.">
+<title>Ashok Kumar — Platform Product Owner</title>
+<style>
+:root{
+  --coral:#ff385c;--coral-dark:#e31c5f;--ink:#222;--muted:#717171;
+  --line:#dddddd;--soft:#f7f7f7;--white:#fff;--green:#008489;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;color:var(--ink);background:#fff;
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height:1.55;-webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+.container{width:min(1160px,92%);margin:auto}
+
+/* Airbnb-inspired top navigation */
+.header{
+  position:sticky;top:0;z-index:1000;background:#fff;
+  border-bottom:1px solid var(--line);
+}
+.nav{height:80px;display:flex;align-items:center;justify-content:space-between;gap:30px}
+.logo{display:flex;align-items:center;gap:9px;color:var(--coral);font-weight:800;font-size:21px;letter-spacing:-.04em}
+.logo-icon{font-size:31px;line-height:1}
+.navlinks{display:flex;gap:5px;align-items:center}
+.navlinks a{padding:10px 14px;border-radius:24px;font-size:14px;font-weight:600}
+.navlinks a:hover{background:var(--soft)}
+.nav-cta{border:1px solid var(--line);padding:10px 17px;border-radius:24px;font-weight:700;font-size:13px}
+.nav-cta:hover{box-shadow:0 2px 7px rgba(0,0,0,.12)}
+.menu{display:none;background:none;border:0;font-size:26px}
+
+/* Hero */
+.hero{padding:72px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:60px;align-items:center}
+.badge{
+  display:inline-flex;align-items:center;gap:8px;padding:8px 13px;
+  border:1px solid #ffd0d8;border-radius:999px;color:var(--coral-dark);
+  font-size:12px;font-weight:800;background:#fff7f8;
+}
+.badge-dot{width:7px;height:7px;border-radius:50%;background:var(--coral)}
+h1{
+  font-size:clamp(45px,6.5vw,76px);line-height:1.02;
+  letter-spacing:-.065em;margin:22px 0 20px;font-weight:750;
+}
+.hero-title-accent{color:var(--coral)}
+.hero-lead{font-size:20px;color:#555;line-height:1.5;max-width:690px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:27px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  padding:12px 19px;border-radius:10px;font-size:14px;font-weight:750;
+  transition:.2s;border:1px solid var(--line)
+}
+.btn-primary{background:var(--coral);color:#fff;border-color:var(--coral)}
+.btn-primary:hover{background:var(--coral-dark);transform:translateY(-1px)}
+.btn-light{background:#fff}
+.btn-light:hover{box-shadow:0 4px 12px rgba(0,0,0,.12)}
+.hero-meta{display:flex;flex-wrap:wrap;gap:18px;margin-top:27px;color:var(--muted);font-size:13px}
+.hero-meta strong{color:var(--ink)}
+
+/* Hero visual */
+.hero-card{
+  min-height:470px;border-radius:28px;overflow:hidden;
+  background:linear-gradient(145deg,#fff0f3,#fff 45%,#eaf9f8);
+  border:1px solid var(--line);position:relative;
+  display:flex;align-items:flex-end;padding:30px;
+}
+.hero-card:before{
+  content:"";position:absolute;width:310px;height:310px;border-radius:50%;
+  background:linear-gradient(135deg,var(--coral),#ff8fa3);
+  top:45px;right:25px;opacity:.95;
+}
+.hero-card:after{
+  content:"AK";position:absolute;top:118px;right:75px;color:#fff;
+  font-size:85px;font-weight:850;letter-spacing:-.08em;
+}
+.profile-info{
+  position:relative;z-index:2;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.9);
+  border-radius:18px;padding:20px;width:100%;box-shadow:0 12px 30px rgba(0,0,0,.08)
+}
+.profile-info h3{font-size:22px;margin:0 0 2px;letter-spacing:-.03em}
+.profile-role{font-size:14px;color:var(--coral-dark);font-weight:750}
+.profile-location{font-size:12px;color:var(--muted)}
+.hero-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-top:16px}
+.mini-stat{background:var(--soft);border-radius:10px;padding:11px}
+.mini-stat b{display:block;font-size:19px}
+.mini-stat span{font-size:10px;color:var(--muted)}
+
+/* Airbnb-style discovery strip */
+.search-strip{
+  border:1px solid var(--line);border-radius:18px;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+  display:grid;grid-template-columns:1fr 1fr 1fr auto;
+  overflow:hidden;background:#fff;margin:0 auto 65px;
+}
+.search-item{padding:16px 20px;border-right:1px solid var(--line)}
+.search-item small{display:block;font-size:10px;font-weight:800;text-transform:uppercase;letter-spacing:.06em}
+.search-item span{font-size:13px;color:var(--muted)}
+.search-btn{
+  width:62px;margin:8px;border:0;border-radius:13px;
+  background:var(--coral);color:#fff;font-size:21px
+}
+
+/* Sections */
+section{padding:85px 0}
+.soft{background:var(--soft)}
+.section-head{margin-bottom:38px}
+.kicker{color:var(--coral-dark);font-size:12px;font-weight:850;text-transform:uppercase;letter-spacing:.1em}
+h2{font-size:42px;line-height:1.08;letter-spacing:-.055em;margin:8px 0 10px}
+.section-intro{color:var(--muted);font-size:16px;max-width:700px}
+
+/* Cards */
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{
+  border:1px solid var(--line);border-radius:18px;padding:27px;background:#fff;
+}
+.card h3{font-size:20px;margin:0 0 10px;letter-spacing:-.025em}
+.card p{margin:0;color:#5f5f5f;font-size:14px}
+.pills{display:flex;flex-wrap:wrap;gap:7px;margin-top:18px}
+.pill{padding:7px 10px;border:1px solid var(--line);border-radius:999px;font-size:11px;font-weight:650;background:#fff}
+
+/* Impact cards */
+.impact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.impact{
+  border:1px solid var(--line);border-radius:18px;padding:25px;background:#fff;
+  min-height:220px;transition:.2s
+}
+.impact:hover{box-shadow:0 7px 24px rgba(0,0,0,.08);transform:translateY(-3px)}
+.impact-icon{
+  width:42px;height:42px;border-radius:12px;background:#fff0f3;
+  color:var(--coral);display:grid;place-items:center;font-weight:850
+}
+.impact-number{font-size:33px;font-weight:800;letter-spacing:-.05em;margin-top:19px}
+.impact h3{font-size:16px;margin:7px 0 6px}
+.impact p{font-size:12px;color:var(--muted);margin:0}
+
+/* Experience */
+.timeline{position:relative}
+.job{
+  display:grid;grid-template-columns:245px 1fr;gap:45px;
+  padding:36px 0;border-top:1px solid var(--line)
+}
+.job:first-child{border-top:0;padding-top:0}
+.company{font-size:19px;font-weight:800;letter-spacing:-.025em}
+.job-title{color:var(--coral-dark);font-weight:700;font-size:13px;margin-top:4px}
+.date{color:var(--muted);font-size:12px;margin-top:8px}
+.job-location{color:var(--muted);font-size:11px}
+.job-summary{margin:0 0 15px;color:#555;font-size:14px}
+.job ul{margin:0;padding-left:18px;color:#555;font-size:13px}
+.job li{margin:7px 0}
+.tag{display:inline-block;margin-top:14px;background:#eaf7f7;color:var(--green);padding:6px 9px;border-radius:8px;font-size:10px;font-weight:750}
+
+/* Skills */
+.skill-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.skill-card{border:1px solid var(--line);border-radius:18px;background:#fff;padding:25px}
+.skill-card h3{margin:0 0 15px;font-size:17px}
+.skill-list{display:flex;flex-wrap:wrap;gap:7px}
+.skill-list span{padding:7px 9px;border-radius:8px;background:var(--soft);font-size:11px;color:#555}
+
+/* Credentials */
+.credential-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.credential{border:1px solid var(--line);border-radius:18px;padding:25px;background:#fff}
+.credential h3{margin:0 0 15px;font-size:18px}
+.credential p{color:var(--muted);font-size:13px;margin:7px 0}
+
+/* Contact */
+.contact{
+  background:linear-gradient(135deg,#fff0f3,#fff 50%,#eaf9f8);
+  border:1px solid var(--line);border-radius:24px;padding:50px;
+  display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center
+}
+.contact h2{font-size:43px}
+.contact p{color:#555}
+.contact-links{display:grid;gap:9px}
+.contact-link{border:1px solid var(--line);background:#fff;border-radius:12px;padding:13px 15px;font-size:13px}
+.contact-link strong{display:block;font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.08em;margin-bottom:2px}
+footer{padding:32px 0;color:var(--muted);font-size:11px;text-align:center;border-top:1px solid var(--line)}
+.back-top{
+  position:fixed;right:20px;bottom:20px;width:44px;height:44px;border:0;
+  border-radius:50%;background:var(--coral);color:#fff;display:none;cursor:pointer;
+  box-shadow:0 7px 20px rgba(255,56,92,.25)
+}
+.back-top.show{display:block}
+
+@media(max-width:850px){
+  .navlinks{display:none;position:absolute;top:72px;left:4%;right:4%;padding:10px;background:#fff;border:1px solid var(--line);border-radius:15px;box-shadow:0 8px 25px rgba(0,0,0,.1);flex-direction:column;align-items:stretch}
+  .navlinks.open{display:flex}
+  .menu{display:block}
+  .nav-cta{display:none}
+  .hero-grid,.contact{grid-template-columns:1fr}
+  .hero-card{min-height:420px}
+  .impact-grid{grid-template-columns:1fr 1fr}
+  .job{grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:600px){
+  .nav{height:68px}
+  .hero{padding:50px 0}
+  h1{font-size:48px}
+  h2{font-size:34px}
+  section{padding:65px 0}
+  .search-strip{grid-template-columns:1fr}
+  .search-item{border-right:0;border-bottom:1px solid var(--line)}
+  .search-btn{width:calc(100% - 16px);height:45px}
+  .impact-grid,.card-grid,.skill-grid,.credential-grid{grid-template-columns:1fr}
+  .hero-stats{grid-template-columns:1fr}
+  .contact{padding:30px 24px}
+  .contact h2{font-size:35px}
+}
+</style>
+</head>
+
+<body>
+<header class="header">
+  <div class="container nav">
+    <a href="#home" class="logo"><span class="logo-icon">⌂</span><span>Ashok Kumar</span></a>
+    <nav class="navlinks" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#impact">Impact</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#credentials">Credentials</a>
+    </nav>
+    <a class="nav-cta" href="#contact">Let's connect</a>
+    <button class="menu" id="menuBtn">☰</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="badge"><span class="badge-dot"></span> Available for Product opportunities</div>
+      <h1>Building better<br><span class="hero-title-accent">platform experiences.</span></h1>
+      <p class="hero-lead">
+        Platform Product Owner and AI/ML Product Manager with an engineering foundation —
+        connecting product thinking, cloud expertise and technical execution to help teams ship faster.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="#experience">Explore experience</a>
+        <a class="btn btn-light" href="mailto:rashok2289@gmail.com">Contact me</a>
+      </div>
+      <div class="hero-meta">
+        <span><strong>11 years</strong> in DevOps engineering</span>
+        <span><strong>Platform Product Owner</strong> at Fidelity Investments</span>
+        <span><strong>Chennai, India</strong></span>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <div class="profile-info">
+        <h3>Engineering → Product</h3>
+        <div class="profile-role">Platform Product Owner | AI/ML Product Manager</div>
+        <div class="profile-location">Chennai, Tamil Nadu, India</div>
+        <div class="hero-stats">
+          <div class="mini-stat"><b>10M+</b><span>files migrated</span></div>
+          <div class="mini-stat"><b>40K</b><span>files / 10 min</span></div>
+          <div class="mini-stat"><b>AI/ML</b><span>automation</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div class="search-strip">
+    <div class="search-item"><small>Specialty</small><span>Platform Product Management</span></div>
+    <div class="search-item"><small>Focus</small><span>Cloud · Developer Experience · AI/ML</span></div>
+    <div class="search-item"><small>Opportunity</small><span>Product Owner / Product Manager</span></div>
+    <button class="search-btn" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">→</button>
+  </div>
+</div>
+
+<section id="about">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker">About me</div>
+    <h2>Product thinking,<br>engineering depth.</h2>
+    <p class="section-intro">
+      I help engineering organizations ship faster and more reliably by bridging product thinking
+      with deep platform and cloud expertise.
+    </p>
+  </div>
+  <div class="card-grid">
+    <article class="card">
+      <h3>My product story</h3>
+      <p>
+        With 11 years in DevOps engineering, I’ve evolved into a Platform Product Owner —
+        owning roadmaps, driving stakeholder alignment and delivering enterprise-scale capabilities
+        that accelerate software delivery. At Fidelity Investments, I lead the DevOps platform
+        roadmap serving thousands of developers, enabling CI/CD quality, cloud-native migration,
+        AI-enabled automation and disaster recovery at scale.
+      </p>
+    </article>
+    <article class="card">
+      <h3>My edge</h3>
+      <p>
+        I can write a user story in the morning and debug a Kubernetes config in the afternoon —
+        blending product vision with technical execution.
+      </p>
+      <div class="pills">
+        <span class="pill">Product Strategy</span><span class="pill">Discovery</span>
+        <span class="pill">Roadmaps</span><span class="pill">PRDs</span>
+        <span class="pill">Backlog</span><span class="pill">Agile</span>
+        <span class="pill">Stakeholders</span><span class="pill">Product Metrics</span>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section class="soft" id="impact">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker">Selected impact</div>
+    <h2>Work that creates<br>measurable value.</h2>
+    <p class="section-intro">Selected outcomes from the experience described in my profile.</p>
+  </div>
+  <div class="impact-grid">
+    <article class="impact"><div class="impact-icon">01</div><div class="impact-number">10M+</div><h3>Customer files migrated</h3><p>Built a cross-account S3 migration platform handling 10M+ encrypted customer files.</p></article>
+    <article class="impact"><div class="impact-icon">02</div><div class="impact-number">40K</div><h3>Files per 10 minutes</h3><p>Securely transferred customer files at 40,000 files per 10 minutes.</p></article>
+    <article class="impact"><div class="impact-icon">03</div><div class="impact-number">DR</div><h3>Zero-touch recovery</h3><p>Automated end-to-end Disaster Recovery using Apache Airflow, removing manual high-risk work.</p></article>
+    <article class="impact"><div class="impact-icon">04</div><div class="impact-number">AI</div><h3>AI-enabled delivery</h3><p>Rolled out GitHub Copilot and multi-agent AI coding tools to accelerate development and testing.</p></article>
+    <article class="impact"><div class="impact-icon">05</div><div class="impact-number">ART</div><h3>Agile leadership</h3><p>Led PI planning, backlog refinement, sprint execution and distributed team coordination.</p></article>
+    <article class="impact"><div class="impact-icon">06</div><div class="impact-number">DX</div><h3>Developer experience</h3><p>Improved developer experience through reusable Terraform modules and self-service infrastructure.</p></article>
+  </div>
+</div>
+</section>
+
+<section id="experience">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker">Experience</div>
+    <h2>A journey from<br>cloud to product.</h2>
+    <p class="section-intro">A progression across DevOps, cloud, technical product management and platform ownership.</p>
+  </div>
+  <div class="timeline">
+
+    <article class="job">
+      <div>
+        <div class="company">Fidelity Investments</div>
+        <div class="job-title">Lead Software Engineer — DevOps</div>
+        <div class="date">April 2023 — Present</div>
+        <div class="job-location">Chennai, Tamil Nadu, India</div>
+      </div>
+      <div>
+        <p class="job-summary"><strong>Platform Product Owner:</strong> Own the DevOps platform roadmap and backlog for Fidelity's enterprise engineering organization across CI/CD, cloud infrastructure and AI-enabled automation.</p>
+        <ul>
+          <li>Engineered a cross-account S3 migration platform, securely transferring 10M+ encrypted customer files at 40,000 files per 10 minutes.</li>
+          <li>Automated end-to-end Disaster Recovery using Apache Airflow, converting a manual, high-risk process into a zero-touch capability and significantly reducing recovery time.</li>
+          <li>Established governance-driven CI/CD release processes with security compliance and audit controls.</li>
+          <li>Adopted GitHub Copilot and multi-agent AI coding tools across the team to accelerate development and testing workflows.</li>
+          <li>Led Agile Release Trains — PI planning, backlog refinement, sprint execution and distributed team coordination.</li>
+          <li>Implemented AI-driven automation solutions integrated with JIRA to streamline delivery workflows.</li>
+          <li>Mentored associates and owned delivery governance, roadmap prioritization, risk mitigation and stakeholder communication.</li>
+          <li>Managed a multi-service AWS portfolio including EKS, ECR, Lambda, DynamoDB, SNS, SQS, S3, IAM, Route53, EC2, EBS and EFS.</li>
+        </ul>
+        <span class="tag">Platform · Cloud · AI/ML · Developer Experience</span>
+      </div>
+    </article>
+
+    <article class="job">
+      <div>
+        <div class="company">Tata Consultancy Services</div>
+        <div class="job-title">Associate Technical Product Manager</div>
+        <div class="date">March 2022 — March 2023</div>
+        <div class="job-location">Chennai, Tamil Nadu, India</div>
+      </div>
+      <div>
+        <ul>
+          <li>Gathered and documented business requirements.</li>
+          <li>Worked with stakeholders to identify process improvements.</li>
+          <li>Converted business needs into functional requirements.</li>
+          <li>Supported Agile delivery teams.</li>
+          <li>Created process flows and documentation.</li>
+          <li>Performed data analysis to support business decisions.</li>
+          <li>Coordinated UAT and production releases.</li>
+        </ul>
+        <span class="tag">Technical Product Management · Agile Delivery</span>
+      </div>
+    </article>
+
+    <article class="job">
+      <div>
+        <div class="company">Tata Consultancy Services</div>
+        <div class="job-title">Senior DevOps Engineer</div>
+        <div class="date">September 2021 — March 2022</div>
+        <div class="job-location">Chennai, Tamil Nadu, India</div>
+      </div>
+      <div>
+        <ul>
+          <li>Designed, developed, debugged, tested and implemented fully automated product-stack deployment from code commit through build, packaging, deployment, regression and customer delivery using Jenkins pipelines.</li>
+          <li>Managed testing, development and production environment servers using UNIX and shell scripting.</li>
+          <li>Installed, configured, maintained and troubleshot Red Hat Enterprise Linux and CentOS.</li>
+        </ul>
+      </div>
+    </article>
+
+    <article class="job">
+      <div>
+        <div class="company">Cognizant</div>
+        <div class="job-title">AWS DevOps Engineer</div>
+        <div class="date">October 2015 — September 2021</div>
+        <div class="job-location">Chennai, Tamil Nadu, India</div>
+      </div>
+      <div>
+        <ul>
+          <li>Implemented continuous project build and deployment delivery using Git, Jenkins and Tomcat.</li>
+          <li>Configured Jenkins jobs and automated build, deployment and CI processes for multiple projects from scratch.</li>
+          <li>Created custom-sized VPCs, subnets, NAT, EC2 instances, ELB and security groups.</li>
+          <li>Managed S3 buckets, objects and permissions, including website hosting.</li>
+          <li>Configured CloudWatch logs and alarms.</li>
+          <li>Automated CI/CD in AWS using CodeDeploy and CodePipeline.</li>
+          <li>Migrated on-premises servers to AWS Cloud using CloudEndure.</li>
+        </ul>
+        <span class="tag">AWS · CI/CD · Cloud Migration · Automation</span>
+      </div>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<section class="soft" id="skills">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker">Skills</div>
+    <h2>What I bring<br>to the table.</h2>
+  </div>
+  <div class="skill-grid">
+    <article class="skill-card">
+      <h3>Product Management</h3>
+      <div class="skill-list">
+        <span>Product Strategy & Vision</span><span>Product Discovery</span><span>Problem Definition</span>
+        <span>User & Customer Research</span><span>Roadmap Planning</span><span>Prioritization</span>
+        <span>Requirements Gathering</span><span>PRD Creation</span><span>User Stories</span>
+        <span>Acceptance Criteria</span><span>Backlog Management</span><span>Product Metrics</span>
+        <span>Experimentation</span><span>Data-driven Decision Making</span><span>Go-to-Market Strategy</span>
+      </div>
+    </article>
+    <article class="skill-card">
+      <h3>Agile & Leadership</h3>
+      <div class="skill-list">
+        <span>Agile & Scrum</span><span>PI Planning</span><span>Backlog Refinement</span>
+        <span>Sprint Planning</span><span>Stakeholder Management</span><span>Cross-functional Leadership</span>
+        <span>RTE</span><span>Scrum Leadership</span><span>Program Delivery</span><span>Risk Mitigation</span>
+      </div>
+    </article>
+    <article class="skill-card">
+      <h3>Cloud & Platform</h3>
+      <div class="skill-list">
+        <span>AWS</span><span>Kubernetes</span><span>EKS</span><span>ECR</span><span>Lambda</span>
+        <span>DynamoDB</span><span>SNS</span><span>SQS</span><span>S3</span><span>IAM</span>
+        <span>Route53</span><span>EC2</span><span>EBS</span><span>EFS</span>
+      </div>
+    </article>
+    <article class="skill-card">
+      <h3>Engineering & Product Tools</h3>
+      <div class="skill-list">
+        <span>Terraform</span><span>Jenkins</span><span>Docker</span><span>CI/CD</span><span>SQL</span>
+        <span>Jira</span><span>Confluence</span><span>Figma</span><span>Miro</span>
+        <span>Mixpanel</span><span>Amplitude</span><span>Slack</span><span>Teams</span><span>AI/ML</span>
+      </div>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="credentials">
+<div class="container">
+  <div class="section-head">
+    <div class="kicker">Credentials</div>
+    <h2>Experience backed<br>by continuous learning.</h2>
+  </div>
+  <div class="credential-grid">
+    <article class="credential">
+      <h3>Education</h3>
+      <p><strong>Master's Degree, Computer Science</strong><br>Francis Xavier Engineering College · 2012–2014</p>
+      <p><strong>Bachelor's Degree, Computer Engineering</strong><br>SCAD College of Engineering and Technology · 2007–2011</p>
+    </article>
+    <article class="credential">
+      <h3>Certifications</h3>
+      <div class="pills">
+        <span class="pill">PMI Agile Certified Practitioner (PMI-ACP)</span>
+        <span class="pill">AI for Product Owners</span>
+        <span class="pill">Microsoft Certified: Azure Fundamentals</span>
+        <span class="pill">Lean Six Sigma Green Belt</span>
+        <span class="pill">Certified Scrum Product Owner (CSPO)</span>
+        <span class="pill">Scrum@Scale Certified Practitioner</span>
+        <span class="pill">AWS Certified Solutions Architect</span>
+      </div>
+    </article>
+    <article class="credential">
+      <h3>Recognition</h3>
+      <p><strong>Business Enabler Award</strong> — Fidelity Investments</p>
+    </article>
+    <article class="credential">
+      <h3>Languages</h3>
+      <p><strong>English</strong> — Full Professional</p>
+      <p><strong>Tamil</strong> — Native or Bilingual</p>
+      <p><strong>Malayalam</strong> — Limited Working</p>
+    </article>
+  </div>
+</div>
+</section>
+
+<section id="contact">
+<div class="container">
+  <div class="contact">
+    <div>
+      <div class="kicker">Let's connect</div>
+      <h2>Let's build the next product experience.</h2>
+      <p>
+        Open to Product Owner / Product Manager opportunities across Platform, Cloud,
+        Developer Experience, Enterprise Technology and AI/ML products.
+      </p>
+      <a class="btn btn-primary" href="mailto:rashok2289@gmail.com">Start a conversation →</a>
+    </div>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:rashok2289@gmail.com"><strong>Email</strong>rashok2289@gmail.com</a>
+      <a class="contact-link" href="tel:+919600785368"><strong>Mobile</strong>+91 96007 85368</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/ashokkumar22" target="_blank" rel="noopener"><strong>LinkedIn</strong>linkedin.com/in/ashokkumar22</a>
+      <div class="contact-link"><strong>Location</strong>Chennai, Tamil Nadu, India</div>
+    </div>
+  </div>
+</div>
+</section>
+</main>
+
+<footer>© <span id="year"></span> Ashok Kumar · Platform Product Owner · Engineering → Product</footer>
+<button class="back-top" id="backTop">↑</button>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const navLinks=document.getElementById('navLinks');
+menuBtn.addEventListener('click',()=>navLinks.classList.toggle('open'));
+navLinks.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>navLinks.classList.remove('open')));
+const backTop=document.getElementById('backTop');
+window.addEventListener('scroll',()=>backTop.classList.toggle('show',window.scrollY>500));
+backTop.addEventListener('click',()=>window.scrollTo({top:0,behavior:'smooth'}));
+document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
